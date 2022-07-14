@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Teste de Overlay</h1>
-
- <h2>a cor dos textos dos yrxtos é violeta</h2>
+    <div class="overlay">
+        <span class="fechar" onclick="fecharOverlay()">&#215</span>
+        <div class="caixa">
+            <h2>Formulário no Overlay</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome">
+            </form>
+        </div>
+    </div>
+    <button class="abrir" onclick="abriroverlay()">Abrir Overlay</button>
+    <script>
+        function abriroverlay(){
+            document.getElementsByClassName("overlay")[0].style.display="block"
+        }
+        function fecharOverlay(){
+            document.getElementsByClassName("overlay")[0].style.display="none"
+        }
+    </script>
 </body>
 </html>
